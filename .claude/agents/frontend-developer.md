@@ -47,6 +47,68 @@ Enfócate en código funcional sobre explicaciones. Incluye ejemplos de uso en c
 - **Tipado**: TypeScript estricto en todos los componentes y hooks
 - **Utilidades Globales**: reutilizar funciones en `@shared/utils/*` (fechas, monedas, etc.)
 
+## 🎨 Paleta de Colores del Sistema
+
+### Colores Principales
+El sistema gira en torno a una paleta minimalista de dos colores que deben combinarse de forma cálida y equilibrada:
+
+**Color Principal (Rojo Borgoña)**: `#AA0F16`
+- **Uso**: Elementos de marca, acciones primarias, estados destacados
+- **Aplicación**: Botones principales, links importantes, headers, acentos
+
+**Color Secundario (Blanco)**: `#FFFFFF`
+- **Uso**: Fondos, espacios, contraste con el color principal
+- **Aplicación**: Backgrounds, tarjetas, texto sobre fondo oscuro
+
+### Guía de Uso de Colores
+
+#### ✅ Combinaciones Aprobadas:
+1. **Fondo blanco con elementos rojos**: Perfecto para layouts, tarjetas y contenido
+2. **Texto rojo sobre fondo blanco**: Para enlaces, títulos y acentos
+3. **Bordes rojos sutiles**: En inputs, tarjetas y separadores
+
+#### 📝 Ejemplos en Tailwind:
+```tsx
+// Botón principal (rojo)
+<Button className="bg-[#AA0F16] hover:bg-[#8B0C12] text-white">
+  Acción Principal
+</Button>
+
+// Enlace de marca
+<a className="text-[#AA0F16] hover:underline">Enlace</a>
+
+// Tarjeta con borde sutil
+<div className="bg-white border border-[#AA0F16]/20 rounded-lg p-6">
+  Contenido
+</div>
+
+// Header con marca
+<header className="bg-[#AA0F16] text-white">
+  Logo y navegación
+</header>
+```
+
+### Reglas de Implementación
+
+- **SIEMPRE** usar el color principal `#AA0F16` para elementos de marca y acciones primarias
+- **SIEMPRE** usar el color secundario `#FFFFFF` para fondos y espacios limpios
+- **EVITAR** agregar otros colores a menos que sea absolutamente necesario
+- **MANTENER** el contraste adecuado entre colores (el rojo sobre blanco garantiza buena accesibilidad)
+- **USAR** opacidades del color principal para elementos secundarios: `border-[#AA0F16]/20`
+
+### Elementos que Usan el Color Principal:
+- ✨ Botones de acción principal (crear, guardar, enviar)
+- 🎯 Links y enlaces de navegación
+- 📊 Headers y navegación principal
+- ⚠️ Estados de alerta importantes
+- 🏷️ Badges y etiquetas destacadas
+
+### Elementos que Usan Juegos de Color con Blanco:
+- 📄 Fondos de páginas y contenedores (blanco)
+- 🎴 Tarjetas y paneles (blanco con borde rojo sutil)
+- 📝 Fondos de modales (blanco)
+- 🛡️ Fondos de formularios (blanco)
+
 ## Convenciones 
 - Componentes: PascalCase (ej: UserProfile.tsx)
 - Archivos/funciones: camelCase (ej: fetchUserData.ts)
